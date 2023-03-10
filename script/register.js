@@ -1,14 +1,5 @@
-// let myArray = [1,2,true,"Miguel"];//aray
-
-// let myObject = {
-//   name: "Miguel",//attributes
-//   age: 20,
-//   email: "anpch@example.com",
-//   music: ["music, bad bunny"]//aray
-// };
-
 //object literal
-
+//create pets using object literal (name, age, age, service)
 let petSalon = {
   name: "The fashion pet salon",
   address: {
@@ -21,40 +12,51 @@ let petSalon = {
     open: "9:00 am",
     close: "5:00 pm"
   },
-  pets: [
-      {
-        name: "Scooby",
-        age: 50,
-        gender: "male",
-        service: "Vaccine"
-      },
-      {
-        name: "Garfield",
-        age: 30,
-        gender: "female",
-        service: "Haircut"
-      },
-      {
-        name: "Linda",
-        age: 15,
-        gender: "female",
-        service: "Nail Clean-up"
-      }
-  ]
+  pets:[]
 }
 
-console.log(petSalon.pets.length);
-console.log(petSalon.pets[0].name);
-console.log(petSalon.pets[0].age);
-console.log(petSalon.pets[0].gender);
-console.log(petSalon.pets[0].service);
+// object constructor
+//------------Parameters---------------
+function Pet(n,a,g,s){
+  //attr or properties
+  this.name = n;
+  this.age = a;
+  this.gender = g;
+  this.service = s;
+}
 
-console.log(petSalon.pets[1].name);
-console.log(petSalon.pets[1].age);
-console.log(petSalon.pets[1].gender);
-console.log(petSalon.pets[1].service);
+//get the values from the inputs
+let inputName = document.getElementById("txtName");
+let inputAge = document.getElementById("txtAge");
+let inputGender = document.getElementById("txtGender");
+let inputService = document.getElementById("txtService");
 
-console.log(petSalon.pets[2].name);
-console.log(petSalon.pets[2].age);
-console.log(petSalon.pets[2].gender);
-console.log(petSalon.pets[2].service);
+
+// register function
+function register() {
+  console.log("register");
+  //create the newPet
+  let newPet = new Pet(inputName.value, inputAge.value, inputGender.value, inputService.value);
+  //push the newPet obj into the array
+  petSalon.pets.push(newPet);
+  //display on the console the pets into the array
+  console.log(petSalon.pets);
+  //clear the form
+  clearForm();
+}
+
+function clearForm() {
+  inputName.value = "";
+  inputAge.value = "";
+  inputGender.value = "";
+  inputService.value = "";
+}
+
+function init() {
+  console.log("init");
+  let pet1 = new Pet("Scooby", 20, "male", "grooming");
+  let pet2 = new Pet("Poseidon", 35, "male", "nail cut");
+  petSalon.pets.push(pet1,pet2);//push the pets into the array
+}
+
+window.onload = init;

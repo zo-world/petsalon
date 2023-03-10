@@ -12,7 +12,7 @@ function displayFooterInfo() {
 displayFooterInfo();
 
 function displayFooterInfo() {
-  console.log("pes info");
+  console.log("pets info");
   //click on the button and display the info
   //on the footer
   document.getElementById("pets").innerHTML =`
