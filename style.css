@@ -6,4 +6,5 @@ body{
 }
 .container{
   text-align: center;
+  display: flex;
 }
