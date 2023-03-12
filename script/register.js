@@ -12,7 +12,7 @@ let petSalon = {
     open: "9:00 am",
     close: "5:00 pm"
   },
-  pets:[]
+  pets: []
 }
 
 // object constructor

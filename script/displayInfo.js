@@ -17,6 +17,6 @@ function displayPetsInfo() {
   //click on the button and display the info
   //on the footer
   document.getElementById("pets").innerHTML =`
-  <p>Pets name are ${petSalon.pets.name}</p>
+  <p>Pets name are ${petSalon.pets.name[0]}</p>
   `;
 }
