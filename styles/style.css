@@ -1,5 +1,16 @@
+
 body{
   background-color: rgb(111, 51, 207);
+  font-family: 'Courier New', Courier, monospace;
+}
+body h2{
+  text-align: center;
+}
+body p{
+  text-align: center;
+}
+header{
+  text-align: center;
 }
 #information{
   text-align: center;

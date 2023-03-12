@@ -4,11 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
   <title>Pet Salon</title>
 </head>
 <body>
-  <div id="information"></div>
+
+  <header>
+    <h1>Registry Form</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+  <h2>Register a new pet, we will be with you shortly!</h2>
+  <p>Pets in the salon = <span id="numberOfPets"></span></p>
   <div class="container">
     <div class="mb-3">
       <label class="form-label">Name: </label>
@@ -55,13 +66,10 @@
     </div>
     <button class="btn btn-light" onclick="register()">Register</button>
   </div>
-  <div id="pets">
-  </div>
-  <footer>
-    <button onclick="displayPetsInfo()">Display Info</button>
-  </footer>
-  
+  <div id="pets"></div>
+  <footer></footer>
   <script src="script/register.js"></script>
   <script src="script/displayInfo.js"></script>
+  <script src="script/displayPets.js"></script>
 </body>
 </html>

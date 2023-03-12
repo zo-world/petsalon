@@ -1,7 +1,7 @@
 //object literal
 //create pets using object literal (name, age, age, service)
 let petSalon = {
-  name: "ZO's Pet Salon",
+  name: "ZO's Fashion Pet Salon",
   address: {
     street: "Santa Isidra 3 Calle 3 D-3",
     city: "Fajardo",
@@ -39,17 +39,57 @@ let inputType = document.getElementById("txtType");
 let inputOwner = document.getElementById("txtOwner");
 let inputPhone = document.getElementById("txtPhone");
 
+//what about if an input is empty?
+function isValid(aPet){
+  let valid = true;//we strat assuming that the inputs are valid
+  if(aPet.name === ""){
+    valid = false;
+  }
+  if(aPet.age === ""){
+    valid = false;
+  }
+  if(aPet.gender === ""){
+    valid = false;
+  }
+  if(aPet.breed === ""){
+    valid = false;
+  }
+  if(aPet.service === ""){
+    valid = false;
+  }
+  if(aPet.type === ""){
+    valid = false;
+  }
+  if(aPet.owner === ""){
+    valid = false;
+  }
+  if(aPet.phone === ""){
+    valid = false;
+  }
+  //otherwise
+  return valid;
+}
+
 // register function
 function register() {
   console.log("register");
   //create the newPet
   let newPet = new Pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value,inputType.value,inputOwner.value,inputPhone.value);
+  //validation
+  if(isValid(newPet)===true){
   //push the newPet obj into the array
   petSalon.pets.push(newPet);
   //display on the console the pets into the array
   console.log(petSalon.pets);
+  updateInfo();
+  displayPetCards();
   //clear the form
   clearForm();
+  } 
+}
+
+function updateInfo() {
+  document.getElementById("numberOfPets").innerHTML = petSalon.pets.length;
 }
 
 function clearForm() {
@@ -68,6 +108,7 @@ function init() {
   let pet1 = new Pet("Scooby", 20, "male", "grooming");
   let pet2 = new Pet("Poseidon", 35, "male", "nail cut");
   let pet3 = new Pet("Garfield", 20, "female", "grooming");
+  displayPetCards();
   petSalon.pets.push(pet1,pet2, pet3);//push the pets into the array
 }
 
