@@ -108,8 +108,9 @@ function init() {
   let pet1 = new Pet("Scooby", 20, "male", "grooming");
   let pet2 = new Pet("Poseidon", 35, "male", "nail cut");
   let pet3 = new Pet("Garfield", 20, "female", "grooming");
-  displayPetCards();
   petSalon.pets.push(pet1,pet2, pet3);//push the pets into the array
+  displayPetCards();
+  updateInfo();
 }
 
 window.onload = init;
