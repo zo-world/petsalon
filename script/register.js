@@ -6,7 +6,7 @@ let petSalon = {
     street: "Santa Isidra 3 Calle 3 D-3",
     city: "Fajardo",
     state: "PR",
-    zip: 10000
+    zip: "00738"
   },
   hours: {
     open: "9:00 am",
@@ -15,8 +15,9 @@ let petSalon = {
   pets: []
 }
 
+let petID=0;
 // object constructor
-//------------Parameters---------------
+//------------Parameters--------------
 function Pet(n,a,g,b,s,t,o,p){
   //attr or properties
   this.name = n;
@@ -27,6 +28,7 @@ function Pet(n,a,g,b,s,t,o,p){
   this.type = t;
   this.owner = o;
   this.phone = p;
+  this.id=petID++;
 }
 
 //get the values from the inputs
@@ -41,7 +43,7 @@ let inputPhone = document.getElementById("txtPhone");
 
 //what about if an input is empty?
 function isValid(aPet){
-  let valid = true;//we strat assuming that the inputs are valid
+  let valid = true;//we start assuming that the inputs are valid
   if(aPet.name === ""){
     valid = false;
   }
@@ -81,8 +83,9 @@ function register() {
   petSalon.pets.push(newPet);
   //display on the console the pets into the array
   console.log(petSalon.pets);
+  displayTable();
   updateInfo();
-  displayPetCards();
+  // displayPetCards();
   //clear the form
   clearForm();
   } 
@@ -90,6 +93,23 @@ function register() {
 
 function updateInfo() {
   document.getElementById("numberOfPets").innerHTML = petSalon.pets.length;
+}
+
+function deletePet(theId) {
+  console.log("Deleting the selected pet", theId);
+  let petIndex;
+  //travel the array
+  for(let i=0; i<petSalon.pets.length; i++){
+    let pet = petSalon.pets[i];
+    //find the pet's id
+    if(pet.id === theId){ 
+      petIndex=i;
+    }
+  }
+  petSalon.pets.splice(petIndex,1);
+  //remove it from the array
+  document.getElementById(theId).remove();
+  updateInfo();
 }
 
 function clearForm() {
@@ -109,7 +129,8 @@ function init() {
   let pet2 = new Pet("Poseidon", 35, "male", "nail cut");
   let pet3 = new Pet("Garfield", 20, "female", "grooming");
   petSalon.pets.push(pet1,pet2, pet3);//push the pets into the array
-  displayPetCards();
+  // displayPetCards();
+  displayTable();
   updateInfo();
 }
 

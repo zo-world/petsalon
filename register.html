@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
+  <script src="https://kit.fontawesome.com/32e02f3748.js" crossorigin="anonymous"></script>
   <title>Pet Salon</title>
 </head>
 <body>
@@ -66,10 +67,30 @@
     </div>
     <button class="btn btn-light" onclick="register()">Register</button>
   </div>
-  <div id="pets"></div>
-  <footer></footer>
-  <script src="script/register.js"></script>
-  <script src="script/displayInfo.js"></script>
+  <div id="pets">
+  </div>
+  <table id="tbl">
+    <thead id="tblhead">
+      <!-- add the table headers -->
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Breed</th>
+        <th>Service</th>
+        <th>Type</th>
+        <th>Owner</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody id="tblbody">
+      <!-- add the tr -->
+    </tbody>
+  </table>
+  <footer>
+
+  </footer>
   <script src="script/displayPets.js"></script>
+  <script src="script/register.js"></script>
 </body>
 </html>
