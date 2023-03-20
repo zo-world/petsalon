@@ -17,7 +17,7 @@
     <p>Pets in the salon = <span id="numberOfPets"></span></p>
     <div class="container">
       <div class="mb-3">
-        <label class="form-label">Pet Name: </label>
+        <label class="form-label">Pet's Name: </label>
         <input type="text" class="form-control" id="txtName">
       </div>
       <div class="mb-3">
@@ -26,7 +26,12 @@
       </div>
       <div class="mb-3">
         <label class="form-label">Pet's Gender: </label>
-        <input type="text" class="form-control" id="txtGender">
+        <select class="form-control" id="txtGender">
+          <option value="" disabled selected>-- Select an option --</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="n/a">Prefer not to answer</option>
+        </select>
       </div>
       <div class="mb-3">
         <label class="form-label">Pet's Breed: </label>
@@ -49,6 +54,7 @@
           <option value="cat">Cat</option>
           <option value="dragon">Dragon</option>
           <option value="monkey">Monkey</option>
+          <option value="ostrich">Ostrich</option>
         </select>
       </div>
       <div class="mb-3">
