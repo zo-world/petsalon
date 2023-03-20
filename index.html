@@ -7,22 +7,88 @@
   <link rel="stylesheet" href="styles/style.css">
   <title>Pet Salon</title>
 </head>
-<body>
-
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="register.html">Register</a>
-    </nav>
-  </header>
-
-  <footer>
-    <div id="information"></div>
-  </footer>
-
-  <script src="script/displayInfo.js"></script>
+<body style="background:url(img/seamless-pattern-grooming-dogs-different-260nw-1549658516.webp);">
+  <div class="wrapper">
+    <header>
+      <img src="img/Untitled.png" alt="">
+      <h1>Registry Form</h1>
+    </header>
+    <h2>Register a new pet, we will be with you shortly!</h2>
+    <p>Pets in the salon = <span id="numberOfPets"></span></p>
+    <div class="container">
+      <div class="mb-3">
+        <label class="form-label">Name: </label>
+        <input type="text" class="form-control" id="txtName">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Age: </label>
+        <input type="number" class="form-control" id="txtAge">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Gender: </label>
+        <input type="text" class="form-control" id="txtGender">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Breed: </label>
+        <input type="text" class="form-control" id="txtBreed">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Service: </label>
+        <select class="form-control" id="txtService">
+          <option value="" disabled selected>-- Select an option --</option>
+          <option value="grooming">Grooming</option>
+          <option value="nails">Nail Cut</option>
+          <option value="vaccine">Vaccines</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Type: </label>
+        <select class="form-control" id="txtType">
+          <option value="" disabled selected>-- Select an option --</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="dragon">Dragon</option>
+          <option value="monkey">Monkey</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Owner: </label>
+        <input type="text" class="form-control" id="txtOwner">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Phone: </label>
+        <input type="tel" class="form-control" id="txtPhone">
+      </div>
+      <button class="btn btn-light" onclick="register()">Register</button>
+    </div>
+    <div id="pets">
+    </div>
+    <table id="tbl">
+      <thead id="tblhead">
+        <!-- add the table headers -->
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Breed</th>
+          <th>Service</th>
+          <th>Type</th>
+          <th>Owner</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody id="tblbody">
+        <!-- add the tr -->
+      </tbody>
+    </table>
+    <footer>
+      <div id="footer" class="grid_12">
+        <p>&copy; Yreish Pozo Copyright 2023</p>
+      </div>
+    </footer>
+  </div>
+  <script src="script/displayPets.js"></script>
   <script src="script/register.js"></script>
+  <script src="https://kit.fontawesome.com/32e02f3748.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -125,9 +125,9 @@ function clearForm() {
 
 function init() {
   console.log("init");
-  let pet1 = new Pet("Scooby", 20, "male", "grooming");
-  let pet2 = new Pet("Poseidon", 35, "male", "nail cut");
-  let pet3 = new Pet("Garfield", 20, "female", "grooming");
+  let pet1 = new Pet("Scooby", 20, "Male","Labrador", "Grooming", "Dog", "Carla", "555-555-5555");
+  let pet2 = new Pet("Zypher",35, "Male", "Pitbull", "Nail Cut", "Dog", "Elliott", "158-485-9584");
+  let pet3 = new Pet("Garfield", 20, "Female", "Ragdoll","Grooming", "Cat", "Billy", "123-456-7890");
   petSalon.pets.push(pet1,pet2, pet3);//push the pets into the array
   // displayPetCards();
   displayTable();
