@@ -16,6 +16,17 @@ body h2{
 body p{
   text-align: center;
 }
+body h2, p{
+  background-color: rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
+}
+
+.wrapper{
+  width: 940px;
+  margin: 20px auto 20px;
+  border: 2px solid #000000;
+  background-color: azure;
+}
 header{
   text-align: center;
   background-color: #000000;
@@ -28,14 +39,26 @@ header img{
   height: 100px;
   width: 100px;
 }
+.container{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+}
+
+.mb-3{
+  background-color:
+  #000000;
+  margin-top: 20px;
+  padding: 10px 0px 5px 0px;
+  color: white;
+}
 #information{
   text-align: center;
 }
-.container{
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
+
 table{
   width: 100%;
   margin-bottom: 20px;
@@ -51,29 +74,11 @@ td, th{
   border: 1px solid black;
 }
 
-.mb-3{
-  background-color:
-  #000000;
-  margin-top: 20px;
-  padding: 10px 0px 5px 0px;
-  color: white;
-}
-
-.btn btn-light{
+.btn .btn-light{
   border: 1px solid black;
+  margin-bottom: 35px!important;
 }
 
 #footer{
   background-color: rgb(161, 161, 161);
-}
-body h2, p{
-  background-color: rgb(0, 0, 0);
-  color:rgb(255, 255, 255);
-}
-
-.wrapper{
-  width: 940px;
-  margin: 20px auto 20px;
-  border: 2px solid #000000;
-  background-color: #ffffff
 }

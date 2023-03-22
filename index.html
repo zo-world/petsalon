@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/style.css">
   <title>Pet Salon</title>
 </head>
@@ -11,10 +12,10 @@
   <div class="wrapper">
     <header>
       <img src="img/Untitled.png" alt="">
-      <h1>Registry Form</h1>
+      <h1>Waitlist Registry</h1>
     </header>
     <h2>Register a new pet, we will be with you shortly!</h2>
-    <p>Pets in the salon = <span id="numberOfPets"></span></p>
+    <p>Pets currently having the best time of their life :) = <span id="numberOfPets"></span></p>
     <div class="container">
       <div class="mb-3">
         <label class="form-label">Pet's Name: </label>
@@ -65,7 +66,9 @@
         <label class="form-label">Contact Phone: </label>
         <input type="tel" class="form-control" id="txtPhone">
       </div>
-      <button class="btn btn-light" onclick="register()">Register</button>
+      <div class="register">
+        <button class="btn btn-light" onclick="register()">Confirm Registration <i class="fa-solid fa-plus"></i></button>
+      </div>
     </div>
     <div id="pets">
     </div>
@@ -93,6 +96,7 @@
       </div>
     </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <script src="script/displayPets.js"></script>
   <script src="script/register.js"></script>
   <script src="https://kit.fontawesome.com/32e02f3748.js" crossorigin="anonymous"></script>
